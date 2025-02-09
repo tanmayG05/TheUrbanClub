@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Occasion</title>
+    <link rel="stylesheet" href="occasion.css">
+</head>
+<body>
+    <header>
+        <div class="logo">The UrbanClub</div>
+        <nav>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <button class="logout-btn" onclick="openLogoutModal()">Log Out</button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <h1>Select an Occasion</h1>
+            <p>Choose the occasion to get personalized outfit suggestions.</p>
+        </div>
+        <div class="occasion-grid">
+            <div class="occasion-widget" onclick="selectOccasion('Casual Outing')">
+                <h2>Casual Outing</h2>
+                <p>Suitable for casual, sporty, streetwear, preppy, and relaxed styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Formal Event')">
+                <h2>Formal Event</h2>
+                <p>Matches well with formal, elegant, chic, and glamorous styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Business Meeting')">
+                <h2>Business Meeting</h2>
+                <p>Fits with business casual, classic, and preppy styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Date Night')">
+                <h2>Date Night</h2>
+                <p>Perfect for romantic, elegant, and chic styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Wedding')">
+                <h2>Wedding</h2>
+                <p>Suitable for formal, elegant, and classic styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Vacation')">
+                <h2>Vacation</h2>
+                <p>Aligns with casual, beach, and sporty styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Holiday Celebration')">
+                <h2>Holiday Celebration</h2>
+                <p>Fits with festive and traditional styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Graduation')">
+                <h2>Graduation</h2>
+                <p>Suitable for classic, formal, and elegant styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Party')">
+                <h2>Party</h2>
+                <p>Matches well with trendy, chic, and glamorous styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Outdoor Adventure')">
+                <h2>Outdoor Adventure</h2>
+                <p>Perfect for sporty, casual, and rugged styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Seasonal Events')">
+                <h2>Seasonal Events</h2>
+                <p>Can include fall season, spring, and other seasonal styles.</p>
+            </div>
+            <div class="occasion-widget" onclick="selectOccasion('Beach Day')">
+                <h2>Beach Day</h2>
+                <p>Fits with beach and casual styles.</p>
+            </div>
+        </div>
+        <div class="submit-container">
+            <button onclick="submitOccasion()">Submit</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 The UrbanClub. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Logout Modal -->
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Logout</h2>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to log out?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="confirm-btn" onclick="confirmLogout()">Yes, Log Out</button>
+                <button class="cancel-btn" onclick="closeLogoutModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="occasion.js"> </script>
+</body>
+</html>

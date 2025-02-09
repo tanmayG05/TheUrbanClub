@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - The UrbanClub</title>
+<link rel="stylesheet" href="help.css">
+</head>
+<body>
+  <header>
+    <div class="logo">The UrbanClub</div>
+    <nav>
+      <ul>
+        <li><a href="homex.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="help">
+    <div class="container">
+      <h1>Help & FAQs</h1>
+      <div class="faq">
+        <h2>How do I create an account?</h2>
+        <p>To create an account, click on the "Signup" button on the homepage, fill in the required details, and submit the form. You will receive a confirmation email with further instructions.</p>
+      </div>
+      <div class="faq">
+        <h2>How do I reset my password?</h2>
+        <p>If you've forgotten your password, click on the "Forgot Password" link on the login page. Follow the instructions to reset your password via email.</p>
+      </div>
+      <div class="faq">
+        <h2>Can I update my profile information?</h2>
+        <p>Yes, you can update your profile information by logging into your account and accessing the profile settings. Here, you can change your details and preferences.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 The UrbanClub. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+  <script >
+    document.querySelectorAll('.faq h2').forEach(faq => {
+  faq.addEventListener('click', () => {
+    faq.parentElement.classList.toggle('active'); // Toggle active class
+  });
+});
+
+  </script>
+</body>
+</html>

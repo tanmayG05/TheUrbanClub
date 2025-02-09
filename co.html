@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Outfit</title>
+    <link rel="stylesheet" href="co.css">
+    
+</head>
+<body>
+<header>
+    <div class="logo">The UrbanClub</div>
+    <nav>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Log Out</button>
+    </nav>
+</header>
+<div class="container">
+    <div class="header">
+        <h1>Create Your Outfit</h1>
+        <p>Select clothing items for your outfit based on your style preferences.</p>
+        <div class="selected-occasion" id="selected-occasion">Occasion: <span id="occasion-name"></span></div>
+    </div>
+    <div id="outfit-grid" class="outfit-grid">
+        <!-- Clothing items will be populated here based on the selected styles and gender -->
+    </div>
+    <button class="submit-button" onclick="submitOutfit()">Submit Outfit</button>
+    <button class="save-button" onclick="openSaveModal()">Save for Next</button>
+</div>
+
+<!-- Save for Next Modal -->
+<div id="save-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeSaveModal()">&times;</span>
+        <h2>Save for Next</h2>
+        <form id="save-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <button type="button" onclick="saveForNext()">Save</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 The UrbanClub. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+        </div>
+    </div>
+</footer>
+
+<script src="co.js"></script>
+    
+
+</body>
+</html>

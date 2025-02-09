@@ -1,0 +1,266 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+.header p {
+    font-size: 1.3em;
+    color: #666;
+}
+.occasion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.occasion-widget {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ddd;
+}
+.occasion-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+    z-index: 0;
+}
+.occasion-widget:hover::before {
+    opacity: 0;
+}
+.occasion-widget:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    background-color: #f9f9f9;
+    border-color: #bbb;
+}
+.occasion-widget h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+    z-index: 1;
+    position: relative;
+}
+.occasion-widget p {
+    font-size: 1.1em;
+    color: #666;
+    margin: 10px 0 0;
+    z-index: 1;
+    position: relative;
+}
+.occasion-widget:hover h2, 
+.occasion-widget:hover p {
+    color: #007bff;
+}
+.submit-container {
+    text-align: center;
+    margin-top: 30px;
+}
+.submit-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.submit-container button:hover {
+    background-color: #0056b3;
+}
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a8a;
+}
+header nav {
+    display: flex;
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+header nav ul li a:hover {
+    color: #4a4a8a;
+    border-bottom: 2px solid #4a4a8a;
+}
+header .logout-btn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+header .logout-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content p {
+    margin-bottom: 10px;
+}
+.footer-content .social-icons {
+    margin-bottom: 10px;
+}
+.footer-content .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-content .social-icons a:hover {
+    color: #f39c12;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    transform: translateY(-30px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-header, .modal-footer {
+    padding: 10px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+.modal-body p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-footer .confirm-btn {
+    background-color: #4CAF50; /* Green */
+}
+
+.modal-footer .confirm-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.modal-footer .cancel-btn {
+    background-color: #f44336; /* Red */
+}
+
+.modal-footer .cancel-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}

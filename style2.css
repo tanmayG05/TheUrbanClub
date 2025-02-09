@@ -1,0 +1,287 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body styles */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a8a;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+    color: #4a4a8a;
+    border-bottom: 2px solid #4a4a8a;
+}
+
+header .logout-btn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header .logout-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Main section styles */
+main {
+    flex: 1;
+    padding: 20px;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Dashboard styles */
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dashboard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #4a4a8a;
+}
+
+/* Widget container styles */
+.widget-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.widget {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.widget:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.widget h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #4a4a8a;
+}
+
+/* Input and Select Styles */
+.widget input,
+.widget select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.widget input:focus,
+.widget select:focus {
+    border-color: #4a4a8a;
+    outline: none;
+}
+
+/* Button styles */
+.widget button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a4a8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+}
+
+.widget button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Gender selection styles */
+.gender-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.gender-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #4a4a8a;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+}
+
+.gender-btn:hover {
+    background-color: #f4f4f9;
+    border-color: #333;
+    transform: scale(1.05);
+}
+
+.gender-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Create Outfit Page Styles */
+.create-outfit {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.create-outfit h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a4a8a;
+}
+
+.create-outfit .weather-section,
+.create-outfit .style-preference-section,
+.create-outfit .occasion-section {
+    margin-bottom: 20px;
+}
+
+.create-outfit .weather-section input,
+.create-outfit .style-preference-section select,
+.create-outfit .occasion-section select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.create-outfit .weather-section input:focus,
+.create-outfit .style-preference-section select:focus,
+.create-outfit .occasion-section select:focus {
+    border-color: #4a4a8a;
+    outline: none;
+}
+
+.create-outfit .submit-outfit-btn {
+    padding: 10px;
+    background-color: #4a4a8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.create-outfit .submit-outfit-btn:hover {
+    background-color: #333;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.footer-content .social-icons {
+    margin-bottom: 10px;
+}
+
+.footer-content .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content .social-icons a:hover {
+    color: #f39c12;
+}
+

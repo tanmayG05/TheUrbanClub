@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The UrbanClub - Welcome</title>
+  <link rel="stylesheet" href="homex.css">
+  
+</head>
+<body>
+  <header>
+    <div class="logo">The UrbanClub</div>
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="content">
+      <h1>Discover Your Perfect Outfit</h1>
+      <p>Personalized fashion advice for every occasion.</p>
+      <div class="auth-widget">
+        <!-- Buttons -->
+        <div class="auth-buttons">
+          <button class="btn login-btn" onclick="showForm('login')">Login</button>
+          <button class="btn signup-btn" onclick="showForm('signup')">Signup</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="auth-form" style="display:none;">
+          <h2>Login</h2>
+          <form id="login-form-action" action="login.html" method="GET" onsubmit="return handleLoginSubmit()">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required placeholder="Enter your email">
+            
+            <label for="login-password">Password:</label>
+            <div class="password-container">
+              <input type="password" id="login-password" name="password" required placeholder="Enter your password" minlength="6">
+              <button type="button" class="toggle-password hide" onclick="togglePasswordVisibility('login-password', this)">Show</button>
+            </div>
+            
+            <div class="auth-buttons">
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn" onclick="hideForms()">Back</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-form" class="auth-form" style="display:none;">
+          <h2>Signup</h2>
+          <form id="signup-form-action" action="signup.html" method="GET" onsubmit="return handleSignupSubmit()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required onchange="updateBodyTypeImages()">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            
+            <div id="bodyTypeImages" class="body-type-images">
+              <img id="ectomorph" src="ectomorph.png" alt="Ectomorph Body Type">
+              <img id="mesomorph" src="mesomorph.png" alt="Mesomorph Body Type">
+              <img id="endomorph" src="endomorph.png" alt="Endomorph Body Type">
+            </div>
+            
+            <label for="body-type">Body Type:</label>
+            <select id="body-type" name="body-type" required>
+              <option value="">Select Body Type</option>
+              <option value="ectomorph">Ectomorph</option>
+              <option value="mesomorph">Mesomorph</option>
+              <option value="endomorph">Endomorph</option>
+            </select>
+            
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required placeholder="Enter your email">
+            
+            <label for="signup-password">Password:</label>
+            <div class="password-container">
+              <input type="password" id="signup-password" name="password" required placeholder="Enter your password" minlength="6">
+              <button type="button" class="toggle-password hide" onclick="togglePasswordVisibility('signup-password', this)">Show</button>
+            </div>
+          
+            <label for="confirm-password">Confirm Password:</label>
+            <div class="password-container">
+              <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password" minlength="6">
+              <button type="button" class="toggle-password hide" onclick="togglePasswordVisibility('confirm-password', this)">Show</button>
+            </div>
+            
+            <div id="error-message" class="error-message"></div>
+            
+            <div class="auth-buttons">
+              <button type="submit" class="btn">Signup</button>
+              <button type="button" class="btn" onclick="hideForms()">Back</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Features</h2>
+    <div class="feature">
+      <img src="img/pf.jpg" alt="Personalized Fashion">
+      <h3>Personalized Fashion</h3>
+      <p>Get outfit recommendations based on your style, body type, and the weather.</p>
+    </div>
+    <div class="feature">
+      <img src="img/lt.jpg" alt="Latest Trends">
+      <h3>Latest Trends</h3>
+      <p>Stay updated with the latest fashion trends and make sure your wardrobe is always in style.</p>
+    </div>
+    
+    <div class="feature">
+      <img src="img/wr.png" alt="Weather-Based Suggestions">
+      <h3>Weather-Based Suggestions</h3>
+      <p>Get outfit suggestions based on real-time weather conditions in your city.</p>
+    </div>
+  </section>
+
+ <!-- How It Works Section -->
+<section class="how-it-works">
+  <h2>How It Works</h2>
+  <p>Get started with these simple steps:</p>
+  
+  <div class="how-work">
+    <img src="img/s1.png" alt="Step 1">
+    <h3>Log In & Check Weather</h3>
+    <p>Log in to your account and check the weather for outfit recommendations.</p>
+  </div>
+  
+  <div class="how-work">
+    <img src="img/s2.png" alt="Step 2">
+    <h3>Choose Style & Occasion</h3>
+    <p>Select your style and the occasion you’re dressing for.</p>
+  </div>
+  
+  <div class="how-work">
+    <img src="img/s3.png" alt="Step 3">
+    <h3>Create Your Outfit</h3>
+    <p>Design your perfect outfit based on your selections.</p>
+  </div>
+</section>
+
+
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+      <img src="img/c1.jpeg" alt="User 1">
+      <p>"The UrbanClub transformed my wardrobe! I love how I can try on outfits virtually and get personalized suggestions." - Tanmay G</p>
+    </div>
+    <div class="testimonial">
+      <img src="img/c2.jpeg" alt="User 2">
+      <p>"It's amazing how accurate the weather-based suggestions are. I always know what to wear no matter the weather!" - Tanmay G</p>
+    </div>
+    <div class="testimonial">
+      <img src="img/c3.jpeg" alt="User 3">
+      <p>"The latest trends feature keeps me up-to-date with fashion. I feel stylish and confident every day!" - Tanmay G</p>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="call-to-action">
+    <h2>Ready to Elevate Your Style?</h2>
+    <p>Join The UrbanClub today and start receiving personalized fashion advice that suits your needs and style.</p>
+    <button onclick="scrollToHero()">Get Started</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 The UrbanClub. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" class="social-icon">Instagram</a>
+      <a href="#" class="social-icon">Twitter</a>
+      <a href="#" class="social-icon">Facebook</a>
+    </div>
+  </footer>
+
+  <script src="homex.js">
+    
+  </script>
+</body>
+</html>
